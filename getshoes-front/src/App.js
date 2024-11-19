@@ -43,13 +43,21 @@ function App() {
     },
     {
       path: "/signup",
-      element: <SignUpPage />,
+      element:(
+        <ProtectedRoute>
+          <SignUpPage />
+        </ProtectedRoute>
+      ),
     },
     {
       path: "/signin",
-      element: <SignInPage />,
+      element:(
+        <ProtectedRoute>
+          <SignInPage />
+        </ProtectedRoute>
+      ),
     },
-  ]);
+  ]); 
 
   return (
     <AuthProvider>
