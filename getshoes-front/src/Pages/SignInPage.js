@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import shoes from "../images/shoesimage3.jpg"
 
 import { MdSportsBaseball } from "react-icons/md";
@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 
 
 export default function SignInPage() {
+    useEffect(() => {
+        document.title = "GetShoes | SignIn";
+      }, []);
   return (
     <div className='w-[100vw] h-[100vh] flex justify-center items-center'>
         <div className='w-[100%] h-[100%] xl:flex-row flex-col-reverse flex justify-center items-center'>
