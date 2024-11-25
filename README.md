@@ -54,12 +54,12 @@ Ensure you have the following installed on your system:
 2. **Install dependencies:**
    - Navigate to the client directory and install frontend dependencies:
      ```bash
-     cd client
+     cd getshoes-front
      npm install
      ```
    - Navigate to the server directory and install backend dependencies:
      ```bash
-     cd ../server
+     cd getshoes-back
      npm install
      ```
 
@@ -97,11 +97,5 @@ Ensure you have the following installed on your system:
 
 ---
 
-## 🤝 Contributing
-Contributions are welcome! Follow these steps to contribute:
-1. **Fork the repository**  
-2. Create a new branch for your feature or bug fix:
-   ```bash
-   git checkout -b feature-name
 
 
