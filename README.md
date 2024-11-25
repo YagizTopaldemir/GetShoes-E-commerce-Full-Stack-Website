@@ -51,3 +51,57 @@ Ensure you have the following installed on your system:
    ```bash
    git clone https://github.com/yourusername/GetShoes.git
    cd GetShoes
+2. **Install dependencies:**
+   - Navigate to the client directory and install frontend dependencies:
+     ```bash
+     cd client
+     npm install
+     ```
+   - Navigate to the server directory and install backend dependencies:
+     ```bash
+     cd ../server
+     npm install
+     ```
+
+3. **Set up the database:**
+   - Create a new MySQL database.
+   - Import the provided `schema.sql` file to initialize the tables:
+     ```bash
+     mysql -u yourusername -p yourdatabase < schema.sql
+     ```
+   - Update the `.env` file in the `server` directory with your database credentials:
+     ```env
+     DB_HOST=localhost
+     DB_USER=yourusername
+     DB_PASSWORD=yourpassword
+     DB_NAME=yourdatabase
+     ```
+
+4. **Run the application:**
+   - Start the backend server:
+     ```bash
+     cd server
+     npm start
+     ```
+   - Start the frontend:
+     ```bash
+     cd ../client
+     npm start
+     ```
+
+5. **Access the application:**
+   - Open your browser and navigate to:
+     ```
+     http://localhost:3000
+     ```
+
+---
+
+## 🤝 Contributing
+Contributions are welcome! Follow these steps to contribute:
+1. **Fork the repository**  
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature-name
+
+
