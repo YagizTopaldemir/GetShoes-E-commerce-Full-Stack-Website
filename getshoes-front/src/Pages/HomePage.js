@@ -6,7 +6,7 @@ import { FaSearch } from "react-icons/fa";
 import shoesimg from "../images/homepageshoes.jpg"
 
 export default function HomePage() {
-  const [filet1,setFilter1] = useState(false)
+  const [filet1,setFilter1] = useState(true)
   const [filet2,setFilter2] = useState(false)
   const [filet3,setFilter3] = useState(false)
 
@@ -29,6 +29,19 @@ export default function HomePage() {
     {id:4,brandname:"Balanciaga"}
   ]
 
+  const shoesdata = [
+    {id:1,shoesimage:"https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/b909e169-7af2-4714-aafa-3dd3c9a2953a/c1ty-street-meat-ayakkab%C4%B1-9lGs6w.png",shoesprice:"4.499,90",shoesbrand:"Nike C1TY “Street Meat”"},
+    {id:2,shoesimage:"https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/4cf9fd2a-a732-401d-a05c-2e352931be0a/dunk-low-retro-se-ayakkab%C4%B1s%C4%B1-g6Q2RZ.png",shoesprice:"4.499,90",shoesbrand:"Nike C1TY “Street Meat”"},
+    {id:3,shoesimage:"https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/4cf9fd2a-a732-401d-a05c-2e352931be0a/dunk-low-retro-se-ayakkab%C4%B1s%C4%B1-g6Q2RZ.png",shoesprice:"4.499,90",shoesbrand:"Nike C1TY “Street Meat”"},
+    {id:4,shoesimage:"https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/4cf9fd2a-a732-401d-a05c-2e352931be0a/dunk-low-retro-se-ayakkab%C4%B1s%C4%B1-g6Q2RZ.png",shoesprice:"4.499,90",shoesbrand:"Nike C1TY “Street Meat”"},
+    {id:5,shoesimage:"https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/4cf9fd2a-a732-401d-a05c-2e352931be0a/dunk-low-retro-se-ayakkab%C4%B1s%C4%B1-g6Q2RZ.png",shoesprice:"4.499,90",shoesbrand:"Nike C1TY “Street Meat”"},
+    {id:6,shoesimage:"https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/4cf9fd2a-a732-401d-a05c-2e352931be0a/dunk-low-retro-se-ayakkab%C4%B1s%C4%B1-g6Q2RZ.png",shoesprice:"4.499,90",shoesbrand:"nike"},
+    {id:7,shoesimage:"https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/4cf9fd2a-a732-401d-a05c-2e352931be0a/dunk-low-retro-se-ayakkab%C4%B1s%C4%B1-g6Q2RZ.png",shoesprice:"4.499,90",shoesbrand:"nike"},
+    {id:8,shoesimage:"https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/4cf9fd2a-a732-401d-a05c-2e352931be0a/dunk-low-retro-se-ayakkab%C4%B1s%C4%B1-g6Q2RZ.png",shoesprice:"4.499,90",shoesbrand:"nike"},
+    {id:9,shoesimage:"https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/4cf9fd2a-a732-401d-a05c-2e352931be0a/dunk-low-retro-se-ayakkab%C4%B1s%C4%B1-g6Q2RZ.png",shoesprice:"4.499,90",shoesbrand:"nike"},
+    {id:10,shoesimage:"https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/h_466,c_limit/4cf9fd2a-a732-401d-a05c-2e352931be0a/dunk-low-retro-se-ayakkab%C4%B1s%C4%B1-g6Q2RZ.png",shoesprice:"4.499,90",shoesbrand:"nike"},
+    
+  ]
   
 
   return (
@@ -39,7 +52,7 @@ export default function HomePage() {
       </div>
   
       <div className='w-[85%] min-h-[120vh] flex justify-between items-start flex-row   mt-[10vh] rounded-lg'>
-        <div className='w-[20%] min-h-[30vh] pb-5 bg-white rounded-lg pt-5 flex justify-start flex-col items-center'>
+        <div className='w-[20%] min-h-[40vh] pb-5 bg-white rounded-lg pt-5 flex justify-start flex-col items-center'>
           <h1 className='text-2xl font-medium'>Filtre</h1>
           <div className='w-[80%] flex justify-start items-center flex-col mt-5 '>
             <div  className='w-[100%] min-h-[5vh] '>
@@ -108,8 +121,20 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className='w-[75%] min-h-[100vh] bg-white rounded-lg pt-5 flex justify-center items-start'>
-          <div className='w-[95%] min-h-[10vh]'>
+        <div className='w-[77%] min-h-[100vh] bg-white rounded-lg pt-5 flex justify-center items-start'>
+          <div className='w-[95%] min-h-[10vh] grid grid-cols-2 justify-between gap-3 pb-5'>
+            {shoesdata.map((shoesmap) => (
+              <div key={shoesmap.id} className=' min-h-[350px]  rounded-xl flex flex-col items-center gap-3 pb-5 hover:opacity-60'>
+                <div className='w-[100%]  flex justify-center items-center'>
+                <img src={shoesmap.shoesimage} className='w-full h-full object-cover  ' /> 
+                </div>
+                <div className='w-[95%] flex flex-col justify-center items-start'>
+                  <div>{shoesmap.shoesbrand}</div>
+                  <div>GetShoes</div>
+                  <div>₺{shoesmap.shoesprice}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
